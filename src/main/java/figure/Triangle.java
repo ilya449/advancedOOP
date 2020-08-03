@@ -1,27 +1,36 @@
 package figure;
 
 public class Triangle extends AbstractFigure {
-    private double catet1;
-    private double catet2;
-    private String color;
+    private double firstCathetus;
+    private double secondCathetus;
+    private double hypotenuse;
 
-    public Triangle(double catet1, double catet2, String color) {
-        this.catet1 = catet1;
-        this.catet2 = catet2;
+    public Triangle(double firstCathetus, double secondCathetus, String color) {
+        this.firstCathetus = firstCathetus;
+        this.secondCathetus = secondCathetus;
+        this.color = color;
+        this.hypotenuse = getHypotenuse();
+    }
+
+    public Triangle(double firstCathetus, double secondCathetus, double hypotenuse, String color) {
+        this.firstCathetus = firstCathetus;
+        this.secondCathetus = secondCathetus;
+        this.hypotenuse = hypotenuse;
         this.color = color;
     }
 
-    public Triangle(int catet1, int catet2, String color) {
-        this.catet1 = catet1;
-        this.catet2 = catet2;
+    public Triangle(int firstCathetus, int secondCathetus, String color) {
+        this.firstCathetus = firstCathetus;
+        this.secondCathetus = secondCathetus;
         this.color = color;
+        this.hypotenuse = getHypotenuse();
     }
 
     @Override
     public String toString() {
         return "Figure is triangle{" +
-                " catet 1=" + catet1 +
-                ", catet 2=" + catet2 +
+                " catet 1=" + firstCathetus +
+                ", catet 2=" + secondCathetus +
                 ", area =" + getArea() +
                 ", color='" + color + '\'' +
                 ", unique method is getHypotenuse = " + getHypotenuse() +
@@ -35,7 +44,7 @@ public class Triangle extends AbstractFigure {
 
     @Override
     public double getArea() {
-        return (this.catet1 * this.catet2) / 2;
+        return (this.firstCathetus * this.secondCathetus) / 2;
     }
 
     @Override
@@ -44,23 +53,23 @@ public class Triangle extends AbstractFigure {
     }
 
     public double getHypotenuse() {
-        return Math.sqrt(Math.pow(catet1, 2) + Math.pow(catet2, 2));
+        return Math.sqrt(Math.pow(firstCathetus, 2) + Math.pow(secondCathetus, 2));
     }
 
-    public double getCatet1() {
-        return catet1;
+    public double getFirstCathetus() {
+        return firstCathetus;
     }
 
-    public double getCatet2() {
-        return catet2;
+    public double getSecondCathetus() {
+        return secondCathetus;
     }
 
-    public void setCatet1(double catet1) {
-        this.catet1 = catet1;
+    public void setFirstCathetus(double firstCathetus) {
+        this.firstCathetus = firstCathetus;
     }
 
-    public void setCatet2(double catet2) {
-        this.catet2 = catet2;
+    public void setSecondCathetus(double secondCathetus) {
+        this.secondCathetus = secondCathetus;
     }
 
     public void setColor(String color) {

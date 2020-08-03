@@ -2,7 +2,6 @@ package figure;
 
 public class Circle extends AbstractFigure {
     private double radius;
-    private String color;
 
     public Circle(double radius, String color) {
         this.radius = radius;

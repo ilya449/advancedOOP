@@ -2,7 +2,6 @@ package figure;
 
 public class Square extends AbstractFigure {
     private double side;
-    private String color;
 
     public Square(double side, String color) {
         this.side = side;

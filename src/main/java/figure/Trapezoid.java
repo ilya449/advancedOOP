@@ -4,7 +4,6 @@ public class Trapezoid extends AbstractFigure {
     private double bottomSide;
     private double topSide;
     private double height;
-    private String color;
 
 
     public Trapezoid(double bottomSide, double topSide, double height, String color) {
